@@ -44,10 +44,10 @@ lets take the simplest method which is Encrypt(String data, Encoding encoding)
    string encryptedText = myEncryptor.Encrypt(text, Encoding.ASCII);<br/>
    //any encoding will work actually, but MUST be the same encoding to use while decypting.
    
-   WriteLine(encryptedText + "\n" + "\n");
+   Console.WriteLine(encryptedText + "\n" + "\n");
    
-   string decryptedText = myEncryptor.Decrypt(encryptedText, Encoding.ASCII);
-   
+   string decryptedText = myEncryptor.Decrypt(encryptedText, Encoding.ASCII);<br/>
+   Console.WriteLine(decryptedText);<br/>
    OUTPUT : QaKLWaDLWaKLQaDLQaKLQaDLQaKLWaDLQaKLQaDLQaKLQaDLQaKLQaKLWaDLRaKLQaDLQaKLQaDLtaKLQaDLQaKLQaDLQaKLQaDLQaKLQaDLWaKLWaKLeaDLeaKLQaKLWaDLQaKLWaDLWaKLQaKLQaDLQaKLQaDLWaKLWaDLQaKLQaDLQaKLQaDLeaKLQaDLWaKLWaDLQaKLWaDLQaKLQaKLWaDLQaKLQaDLQaKLWaDLQaKLQaDLQaKLQaDLRaKLWaKLQaDLQaKLQaDLQaKLWaDLQaKLWaDLWaKLQaDLWaKLQaKLeaDLQaKLQaDLQaKLQaDLQaKLWaDLWaKLeaDLQaKLWaDLeaKLQaDLQaKLQaKLQaDLWaKLWaDLQaKLQaDLQaKLWaDLeaKLWaDLWaKLWaDLQaKLWaDLQaKLQaKLWaDLeaKLQaDLQaKLQaKLQaDLtaKLQaDLWaKLRaDLQaKLQaDLWaKLRaDLQaKLQaDL[BE]
    
 A simple text
@@ -69,11 +69,11 @@ It's so simple yet, so strong. but this was actually a weak method. let's add mo
    //Password 1 MUST BE 9 character in length. <br/>
    //Password 2 can be anything, but as you know "size matters" the "longer" password the "Harder" it becomes harder to be guessed.<br/>
    
-   WriteLine(encryptedText + "\n" + "\n");
+   Console.WriteLine(encryptedText + "\n" + "\n");
    
    string decryptedText = myEncryptor.Decrypt(encryptedText, Encoding.ASCII, "123456789", "AnY PaSSwOrd Will WoRk");
-   
-   **//Anything used while encrypting, MUST be used while decrypting.
+   //Anything used while encrypting, MUST be used while decrypting.<br/>
+   Console.WriteLine(decryptedText);<br/>
    
    OUTPUT : 
    2aKL2aDL4aKL1aKL2aDL3aKL1aDL1aKL1aKL1aDL1aKL1aDL2aKL1aDL1aKL1aKL1aDL1aKL2aDL2aKL1aDL2aKL3aDL2aKL1aDL1aKL1aDL1aKL1aDL1aKL1aDL2aKL1aKL1aDL2aKL2aDL1aKL1aDL1aKL3aDL2aKL2aDL1aKL2aDL4aKL1aDL2aKL2aDL1aKL1aDL1aKL1aDL1aKL1aDL2aKL2aDL2aKL1aKL1aDL2aKL1aDL2aKL1aDL1aKL1aDL2aKL1aDL3aKL1aKL1aDL1aKL1aDL2aKL2aDL2aKL1aDL1aKL4aDL2aKL2aDL1aKL3aDL1aKL1aDL3aKL2aDL1aKL1aKL2aDL1aKL3aDL1aKL2aKL2aDL1aKL3aDL1aKL2aDL1aKL1aDL3aKL1aKL1aDL1aKL1aDL3aKL1aDL1aKL2aDL2aKL3aDL2aKL4aDL1aKL1aDL2aKL4aDL1aKL1aDL[BE]
@@ -102,12 +102,12 @@ A simple text
    //the second boolen variable tells the algorithim to use the extra sec. feat. which destroys the original text using the password.<br/>
    //ofcourse you can use the extra features or not as you wish, but remember to be the same when decrypting.<br/>
    
-   WriteLine(encryptedText + "\n" + "\n");
+   WriteLine(encryptedText + "\n" + "\n");<br/>
    
-   string decryptedText = myEncryptor.Decrypt(encryptedText, Encoding.ASCII, "123456789", "AnY PaSSwOrd Will WoRk", encryption.CryptoTypes.encTypeTripleDES, true, true);
-   
-  //anything used while encrypting, MUST be used while decrypting.
-   
+   string decryptedText = myEncryptor.Decrypt(encryptedText, Encoding.ASCII, "123456789", "AnY PaSSwOrd Will WoRk", encryption.CryptoTypes.encTypeTripleDES, true, true);<br/>
+   //anything used while encrypting, MUST be used while decrypting.<br/>
+   Console.WriteLine(decryptedText);<br/>
+   <br/>
    OUTPUT :  
    
    1aKL1aDL2aKL2aDL1aKL1aDL1aKL1aDL2aKL2aDL1aKL1aDL2aKL2aDL2aKL1aDL1aKL2aKL2aDL3aKL1aDL1aKL1aDL4aKL1aDL1aKL1aKL4aDL1aKL1aDL1aKL1aKL1aDL1aKL1aDL1aKL1aDL1aKL1aDL1aKL2aDL1aKL2aDL1aKL1aDL1aKL1aDL2aKL1aDL3aKL1aKL1aDL2aKL4aDL1aKL3aDL4aKL1aKL2aDL1aKL4aDL1aKL3aDL2aKL2aDL1aKL1aDL1aKL2aDL2aKL1aDL1aKL1aDL4aKL1aDL1aKL1aKL2aDL4aKL1aDL1aKL2aDL2aKL3aDL2aKL2aDL1aKL3aDL1aKL1aDL2aKL1aDL1aKL2aDL2aKL3aDL3aKL1aKL2aDL1aKL2aDL1aKL1aDL1aKL1aDL2aKL1aDL3aKL1aKL2aDL2aKL3aDL1aKL1aDL1aKL2aDL2aKL1aDL1aKL4aDL2aKL1aDL1aKL1aDL1aKL1aDL3aKL1aDL1aKL2aDL2aKL2aDL1aKL1aKL2aDL1aKL2aDL1aKL1aDL1aKL1aDL1aKL1aDL1aKL1aDL1aKL1aDL2aKL2aDL2aKL1aDL1aKL2aKL2aDL3aKL1aDL1aKL2aDL1aKL1aDL1aKL2aDL1aKL1aDL1aKL2aDL1aKL1aDL1aKL1aKL1aDL1aKL1aDL1aKL1aDL1aKL1aDL1aKL1aDL1aKL2aDL3aKL1aKL1aDL2aKL3aDL1aKL2aKL2aDL2aKL2aDL1aKL3aDL1aKL1aDL1aKL1aDL1aKL2aDL1aKL3aDL1aKL1aKL4aDL2aKL1aDL1aKL1aDL2aKL3aDL1aKL1aKL1aDL2aKL1aDL1aKL1aDL1aKL2aKL2aDL4aKL2aKL4aDL1aKL1aDL[BE]
