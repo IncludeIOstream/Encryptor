@@ -5,6 +5,7 @@ It can't be broke by Known-plaintext attack and Chosen-plaintext attack.(if full
 it can take up to years for a brute-force attack to break an encryted string.(if used with the recommend options).<br/>
 The main class is System.Security.EncryptString<br/>
 I have made the algorithim to be only one method for each action either encrypt or decrypt.<br/>
+IMPORTANT NOTE : This lib is for free use, so if you like it, Please donate.<br/>
 # The EncryptString(main class in the lib) class contains <br/>
 *******************************************************************************************************************************
 public String Encrypt(String data, Encoding encoding);
@@ -34,8 +35,8 @@ The methods is sorted from low to high security. With each variable passes to th
 
 lets take the simplest method which is Encrypt(String data, Encoding encoding)
 
-   using System.Security;
-   using System.Text.Encoding;
+   using System.Security;<br/>
+   using System.Text;<br/>
    
    string text = "A simple text";
    
@@ -56,8 +57,8 @@ A simple text
 
 It's so simple yet, so strong. but this was actually a weak method. let's add more variables to make it stronger :
 
-   using System.Security;
-   using System.Text.Encoding;
+   using System.Security;<br/>
+   using System.Text;<br/>
    
    string text = "A simple text";
    
@@ -83,8 +84,8 @@ A simple text
 ********************************************************************************************************************************   
   It's not that hard to understand, yet so strong. but this was actually a not full security and not to be considered weak.   let's add more variables to make it stronger :
 
-   using System.Security;
-   using System.Text.Encoding;
+   using System.Security;<br/>
+   using System.Text;<br/>
    
    string text = "A simple text";
    
@@ -121,14 +122,14 @@ password 2 can be anything.<br/>
 # Error list 
 _______________________________________
 *
-    * Error 101 = not a valid encrypted string                                                                                                                             *
+    * Error 101 = not a valid or modified encrypted string                                                                                                                             *
     * Error 102 = Illegal character used as a password1 character                                                                                                           * 
     * Error 103 = Password1 can be ONLY nine characters. not more or less                                                                                                  *
-    * Error 104 = not a valid encrypted string                                                                                                                             *
-    * Error 105 = not a valid encrypted string
+    * Error 104 = not a valid or modified encrypted string                                                                                                                             *
+    * Error 105 = not a valid or modified encrypted string
 *
-    * Error 106 = not a valid encrypted string                                                                                     *
-    * Error 107 = not a valid encrypted string                                                                                      *
-    * Error 108 = not a valid encrypted string                                                                                      *
-    * "?" character that represented alot in a decrypted string is because, eather the password2 is wrong or the text       isn't encrypted with extra function 2
+    * Error 106 = not a valid or modified encrypted string                                                                                     *
+    * Error 107 = not a valid or modified encrypted string                                                                                      *
+    * Error 108 = not a valid or modified encrypted string                                                                                      *
+    * "?" character that represented alot in a decrypted string is because, eather the password2 is wrong or the text       isn't encrypted with extra function 2 and decrypted using extra function 2
 ********************************************************************************************************************************
