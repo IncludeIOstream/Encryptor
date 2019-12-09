@@ -65,7 +65,7 @@ It's so simple yet, so strong. but this was actually a weak method. let's add mo
    
    //any encoding will work actually, but MUST be the same encoding to use while decypting.
    //Password 1 MUST BE 9 character in length. 
-   //Password 2 can be anything, but as you know "size matters" the "longer" password the "Harder" it becomes to be guessed.
+   //Password 2 can be anything, but as you know "size matters" the "longer" password the "Harder" it becomes harder to be guessed.
    
    WriteLine(encryptedText + "\n" + "\n");
    
