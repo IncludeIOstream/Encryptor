@@ -1,10 +1,11 @@
 # Encryptor
-An Encrypt/Decrypt algorithim.
-It can't be broke by Known-plaintext attack and Chosen-plaintext attack.(if full power method is used).
-it can take up to years for a brute-force attack to break an encryted string.(if used with the recommend options).
-The main class is System.Security.SecureString.
-I have made the algorithim to be only one method for each action either encrypt or decrypt.
-The class contains 
+An Encrypt/Decrypt algorithim in lib.<br/>
+C# only(yet).<br/>
+It can't be broke by Known-plaintext attack and Chosen-plaintext attack.(if full power method is used).<br/>
+it can take up to years for a brute-force attack to break an encryted string.(if used with the recommend options).<br/>
+The main class is System.Security.SecureString.<br/>
+I have made the algorithim to be only one method for each action either encrypt or decrypt.<br/>
+# The class contains <br/>
 *******************************************************************************************************************************
 public String Encrypt(String data, Encoding encoding);
 
@@ -114,9 +115,9 @@ A simple text
    
 ********************************************************************************************************************************   
 Illegal characters to use in password 1 : K, D, T, L, [,], B, E <br/>
-password 2 can be anything.
+password 2 can be anything.<br/>
 
-Error list 
+# Error list 
 _______________________________________
 *
     * Error 101 = not a valid encrypted string                                                                                                                             *
