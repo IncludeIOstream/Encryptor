@@ -113,7 +113,7 @@ A simple text
 A simple text 
    
 ********************************************************************************************************************************   
-Illegal characters to use in password 1 : K, D, T, L, [,], B, E
+Illegal characters to use in password 1 : K, D, T, L, [,], B, E <br/>
 password 2 can be anything.
 
 Error list 
