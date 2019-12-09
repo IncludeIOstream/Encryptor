@@ -3,9 +3,9 @@ An Encrypt/Decrypt algorithim in lib.<br/>
 C# only(yet).<br/>
 It can't be broke by Known-plaintext attack and Chosen-plaintext attack.(if full power method is used).<br/>
 it can take up to years for a brute-force attack to break an encryted string.(if used with the recommend options).<br/>
-The main class is System.Security.SecureString.<br/>
+The main class is System.Security.EncryptString<br/>
 I have made the algorithim to be only one method for each action either encrypt or decrypt.<br/>
-# The SecureString(main class in the lib) class contains <br/>
+# The EncryptString(main class in the lib) class contains <br/>
 *******************************************************************************************************************************
 public String Encrypt(String data, Encoding encoding);
 
@@ -39,7 +39,7 @@ lets take the simplest method which is Encrypt(String data, Encoding encoding)
    
    string text = "A simple text";
    
-   SecureString myEncryptor = new SecureString();//creating instance to main class
+   EncryptString myEncryptor = new EncryptString();//creating instance to main class
    
    string encryptedText = myEncryptor.Encrypt(text, Encoding.ASCII);<br/>
    //any encoding will work actually, but MUST be the same encoding to use while decypting.
@@ -61,7 +61,7 @@ It's so simple yet, so strong. but this was actually a weak method. let's add mo
    
    string text = "A simple text";
    
-   SecureString myEncryptor = new SecureString();//creating instance to main class
+   EncryptString myEncryptor = new EncryptString();//creating instance to main class
    
    string encryptedText = myEncryptor.Encrypt(text, Encoding.ASCII, "123456789", "AnY PaSSwOrd Will WoRk");<br/>
    
@@ -88,7 +88,7 @@ A simple text
    
    string text = "A simple text";
    
-   SecureString myEncryptor = new SecureString();//creating instance to main class
+   EncryptString myEncryptor = new EncryptString();//creating instance to main class
    <br/>
    //Full power method.<br/>
    
