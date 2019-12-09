@@ -5,7 +5,7 @@ It can't be broke by Known-plaintext attack and Chosen-plaintext attack.(if full
 it can take up to years for a brute-force attack to break an encryted string.(if used with the recommend options).<br/>
 The main class is System.Security.SecureString.<br/>
 I have made the algorithim to be only one method for each action either encrypt or decrypt.<br/>
-# The class contains <br/>
+# The SecureString(main class in the lib) class contains <br/>
 *******************************************************************************************************************************
 public String Encrypt(String data, Encoding encoding);
 
@@ -39,9 +39,10 @@ lets take the simplest method which is Encrypt(String data, Encoding encoding)
    
    string text = "A simple text";
    
-   SecureString myEncryptor = new SecureString();//Initializing the main class
+   SecureString myEncryptor = new SecureString();//creating instance to main class
    
-   string encryptedText = myEncryptor.Encrypt(text, Encoding.ASCII);//any encoding will work actually, but MUST be the same            encoding to use while decypting.
+   string encryptedText = myEncryptor.Encrypt(text, Encoding.ASCII);<br/>
+   //any encoding will work actually, but MUST be the same encoding to use while decypting.
    
    WriteLine(encryptedText + "\n" + "\n");
    
@@ -60,9 +61,9 @@ It's so simple yet, so strong. but this was actually a weak method. let's add mo
    
    string text = "A simple text";
    
-   SecureString myEncryptor = new SecureString();//Initializing the main class
+   SecureString myEncryptor = new SecureString();//creating instance to main class
    
-   string encryptedText = myEncryptor.Encrypt(text, Encoding.ASCII, "123456789", "AnY PaSSwOrd Will WoRk");
+   string encryptedText = myEncryptor.Encrypt(text, Encoding.ASCII, "123456789", "AnY PaSSwOrd Will WoRk");<br/>
    
    //Any encoding will work actually, but MUST be the same encoding to use while decypting.<br/>
    //Password 1 MUST BE 9 character in length. <br/>
@@ -87,7 +88,7 @@ A simple text
    
    string text = "A simple text";
    
-   SecureString myEncryptor = new SecureString();//Initializing the main class
+   SecureString myEncryptor = new SecureString();//creating instance to main class
    <br/>
    //Full power method.<br/>
    
