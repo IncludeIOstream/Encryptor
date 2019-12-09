@@ -111,3 +111,21 @@ A simple text
    
 A simple text 
    
+********************************************************************************************************************************   
+Illegal characters to use in password 1 : K, D, T, L, [,], B, E
+password 2 can be anything.
+
+Error list 
+_______________________________________
+*
+    * Error 101 = not a valid encrypted string                                                                                                                             *
+    * Error 102 = Illegal character used as a password1 character                                                                                                           * 
+    * Error 103 = Password1 can be ONLY nine characters. not more or less                                                                                                  *
+    * Error 104 = not a valid encrypted string                                                                                                                             *
+    * Error 105 = not a valid encrypted string
+*
+    * Error 106 = not a valid encrypted string                                                                                     *
+    * Error 107 = not a valid encrypted string                                                                                      *
+    * Error 108 = not a valid encrypted string                                                                                      *
+    * "?" character that represented alot in a decrypted string is because, eather the password2 is wrong or the text       isn't encrypted with extra function 2
+********************************************************************************************************************************
